@@ -17,7 +17,7 @@ var db = monk('localhost:27017/shoppinglist');
 app.set('db',db);
 app.use(session({  
   store: new RedisStore({
-    url: 'localhost:6379'
+    url: '//localhost:6379'
   }),
   secret: 'il segreto della pietra azzurra',
   resave: false,
