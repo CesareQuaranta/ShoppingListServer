@@ -7,9 +7,9 @@ var users = db.get('users');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   users.count({}, function (error, count) {
-   if (err) {
-        console.log(err);
-        res.send('Errore collection users:'+err);
+   if (!!error) {
+        console.log(error);
+        res.send('Errore collection users:'+error);
       }else{
       res.send(count+" Users registred");
       }
